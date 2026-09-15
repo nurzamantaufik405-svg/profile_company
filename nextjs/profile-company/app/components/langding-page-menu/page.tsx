@@ -47,17 +47,11 @@ const components: { title: string; href: string; }[] = [
 
 export default function Menulandingpage() {
   return (
-    <div className="flex items-center gap-4 w-full px-4 py-2 bg-blue-500 border-b border-blue-600">
-      <Image
-        className="h-5 w-[100px]"
-        src="/img/smk_mvp_ars_logo_white.png.png"
-        alt="SMK MVP ARS Logo"
-        width={100}
-        height={20}
-        priority
-      />
-      <NavigationMenu>
-        <NavigationMenuList>
+
+     
+
+      <NavigationMenu className="flex-1">
+        <NavigationMenuList className="flex items-center gap-2">
           <NavigationMenuItem>
             <NavigationMenuTrigger>jurusan</NavigationMenuTrigger>
             <NavigationMenuContent>
@@ -74,7 +68,7 @@ export default function Menulandingpage() {
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
-          
+
           <NavigationMenuItem>
             <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
               <Link href="/docs">Docs</Link>
@@ -82,7 +76,7 @@ export default function Menulandingpage() {
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
-    </div>
+
   )
 }
 
