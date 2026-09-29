@@ -68,6 +68,14 @@ export default function Menulandingpage() {
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
+          
+          <NavigationMenuItem>
+            <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+              <Link href="https://pyrotech.biz.id/">project</Link>
+            </NavigationMenuLink>
+          </NavigationMenuItem>
+
+
 
           <NavigationMenuItem>
             <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
@@ -76,6 +84,7 @@ export default function Menulandingpage() {
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
+      
 
   )
 }

@@ -1,3 +1,5 @@
+"use client"
+
 export function LandingPageHero() {
     return (
         <section className="flex w-full min-h-[114vh] bg-blue-800 dark:bg-black items-center justify-center px-6 text-center ">
@@ -15,7 +17,7 @@ export function LandingPageHero() {
                     leading-7
                     text-blue-100
                     sm:text-lg
-                    ">This is the hero section</p>
+                    ">"welllll pokonamah wanien"</p>
                 </div>
                 
             </div>

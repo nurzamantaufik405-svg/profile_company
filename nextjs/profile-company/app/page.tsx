@@ -1,11 +1,13 @@
+"use client"
+
+import { useState } from "react";
 import Image from "next/image";
 import MenuLandingPage from "@/app/components/langding-page-menu/page";
 import { Button } from "@/components/ui/button";
 import { LandingPageHero } from "@/app/components/langding-page-hero/page";
-import { SearchIcon } from "lucide-react"
+import { SearchIcon, X } from "lucide-react"
 import {
   Field,
-  FieldDescription,
   FieldLabel,
 } from "@/components/ui/field"
 import {
@@ -15,6 +17,8 @@ import {
 } from "@/components/ui/input-group"
 
 export default function Home() {
+  const [isLoginOpen, setIsLoginOpen] = useState(false);
+
   return (
     <main className="relative relative w-full bg-white dark:bg-black">
       <div className="relative z-0 -mt-[96px]">
@@ -31,45 +35,54 @@ export default function Home() {
             <MenuLandingPage />
           </div>
           {/* login */}
-          <div className="flex items-center justify-end p-4">
+        <div className="flex items-center justify-end p-4">
             <Button
+              onClick={() => setIsLoginOpen(true)}
               className="
-            bg-white 
-            border border-gray-300 
-            text-orange-500 
-            hover:bg-gray-100 
-            dark:bg-gray-800 
-            dark:border-gray-700 
-            dark:text-orange-400
-            text-[16px]
-            rounded-full"
+              bg-white 
+              border border-gray-300 
+              text-orange-500 
+              hover:bg-gray-100 
+              dark:bg-gray-800 
+              dark:border-gray-700 
+              dark:text-orange-400
+              text-[16px]
+              font-semibold
+              rounded-full
+              p-[20px]"
               size="lg"
             >
               Login
             </Button>
           </div>
         </div>
-      </div>
-      <div className="flex flex-col gap-4 items-center justify-center p-6 bg-white dark:bg-gray-800 rounded-[5px] w-full max-w-md mx-auto my-8">
+          {isLoginOpen && (
+        <div className="flex flex-col gap-4 items-center justify-center p-6 bg-white dark:bg-gray-800 rounded-[5px] w-full max-w-md mx-auto my-8">
           <Field className="max-w-sm">
-          <FieldLabel htmlFor="inline-start-input">gmail</FieldLabel>
+          <FieldLabel htmlFor="gmail-input">gmail</FieldLabel>
             <InputGroup>
-              <InputGroupInput id="inline-start-input" placeholder="Search..." />
+              <InputGroupInput id="gmail-input" type="email" placeholder="Masukkan gmail" />
               <InputGroupAddon align="inline-start">
                 <SearchIcon className="text-muted-foreground" />
               </InputGroupAddon>
             </InputGroup>
           </Field>
           <Field className="max-w-sm">
-            <FieldLabel htmlFor="inline-start-input">password</FieldLabel>
+            <FieldLabel htmlFor="password-input">password</FieldLabel>
             <InputGroup>
-              <InputGroupInput id="inline-start-input" placeholder="Search..." />
+              <InputGroupInput id="password-input" type="password" placeholder="Masukkan password" />
               <InputGroupAddon align="inline-start">
                 <SearchIcon className="text-muted-foreground" />
               </InputGroupAddon>
             </InputGroup>
           </Field>
+          <Button type="button" variant="outline" onClick={() => setIsLoginOpen(false)}>
+            <X className="w-4 h-4" />
+          </Button>
         </div>
+      )}
+      </div>
+    
       
     </main>
 
