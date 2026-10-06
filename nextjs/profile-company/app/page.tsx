@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import MenuLandingPage from "@/app/components/langding-page-menu/page";
 import { Button } from "@/components/ui/button";
-import { LandingPageHero } from "@/app/components/langding-page-hero/page";
+import { LandingPageHero } from "@/app/components/landing-page-hero/hero";
 import { SearchIcon, X } from "lucide-react"
 import {
   Field,
