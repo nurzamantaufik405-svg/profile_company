@@ -16,7 +16,7 @@ export const iconMap: Record<string, React.ComponentType<any>> = {
   plus: LucideIcons.Plus,
   minus: LucideIcons.Minus,
   check: LucideIcons.Check,
-  dasboard: LucideIcons.LayoutDashboard,
+  dasboard: LucideIcons. Warehouse,
   x: LucideIcons.X,
   arrow: LucideIcons.ArrowRight,
   chevron: LucideIcons.ChevronRight,
