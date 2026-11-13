@@ -25,8 +25,8 @@ export default function UserManagementPage() {
             {isFormOpen ? (
                 // TAMPILAN FORM
                 <Card className="p-6">
-                    <h1 className="text-2xl font-bold">Profile-company</h1>
-                    <p>Welcome to your company profile!</p>
+                    <h1 className="text-2xl font-bold">article</h1>
+                    <p>Welcome to your company article!</p>
                     <div className="grid w-full max-w-lg gap-6 mt-4">
                         <InputGroup>
                             <InputGroupInput placeholder="Search..." />

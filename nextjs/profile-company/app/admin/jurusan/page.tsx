@@ -15,7 +15,7 @@ import {
 } from "@/components/ui/table"
 import { CheckIcon, CreditCardIcon, InfoIcon, MailIcon, SearchIcon, StarIcon } from "lucide-react"
 
-export default function UserManagementPage() {
+export default function UserJurusanPage() {
     // 1. Deklarasi state untuk mengontrol buka/tutup form
     const [isFormOpen, setIsFormOpen] = useState(false)
 
@@ -25,8 +25,8 @@ export default function UserManagementPage() {
             {isFormOpen ? (
                 // TAMPILAN FORM
                 <Card className="p-6">
-                    <h1 className="text-2xl font-bold">Profile-company</h1>
-                    <p>Welcome to your company profile!</p>
+                    <h1 className="text-2xl font-bold">jurusan</h1>
+                    <p>Welcome to your jurusan</p>
                     <div className="grid w-full max-w-lg gap-6 mt-4">
                         <InputGroup>
                             <InputGroupInput placeholder="Search..." />
@@ -76,12 +76,12 @@ export default function UserManagementPage() {
                     </div>
                     
                     <Table>
-                        <TableCaption>A list of your recent invoices.</TableCaption>
+                        <TableCaption>A list of jurusan in mvp</TableCaption>
                         <TableHeader>
                             <TableRow>
-                                <TableHead className="w-[100px]">Invoice</TableHead>
-                                <TableHead>Status</TableHead>
-                                <TableHead>Method</TableHead>
+                                <TableHead className="w-[100px]">id</TableHead>
+                                <TableHead>prodi</TableHead>
+                                <TableHead>jurusan</TableHead>
                                 <TableHead className="text-right">Amount</TableHead>
                             </TableRow>
                         </TableHeader>
